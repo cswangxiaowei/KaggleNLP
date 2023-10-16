@@ -1,0 +1,21 @@
+{
+  "unsupervised_model": {
+    "base_name": "AIDA-UPM/mstsb-paraphrase-multilingual-mpnet-base-v2",
+    "save_name": "trained_models/unsupervised/paraphrase-multilingual-mpnet-base-v2",
+    "seq_len": 128,
+    "epochs": 50,
+    "batch_size": 128,
+    "warmup_ratio": 0.03,
+    "top_n": 100,
+    "seed": 42
+  },
+  "supervised_model": {
+    "base_name": "trained_models/unsupervised/paraphrase-multilingual-mpnet-base-v2",
+    "save_name": "trained_models/supervised/paraphrase-multilingual-mpnet-base-v2",
+    "threshold": 0.0125,
+    "seq_len": 128,
+    "epochs": 40,
+    "batch_size": 256,
+    "warmup_ratio": 0.05
+  }
+}
